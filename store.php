@@ -21,7 +21,7 @@
               <a class="nav-link text-uppercase text-expanded" href="about.php">Om oss</a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="products.php">Produkter</a>
+              <a class="nav-link text-uppercase text-expanded" href="products.php">Second hand</a>
             </li>
             <li class="nav-item active px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="store.php">Besök oss</a>
