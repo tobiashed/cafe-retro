@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Café Retro ägs av Kim, Senna och Edit. Återförsäljare till Retrobutiken.">
     <meta name="author" content="">
+    <link rel="shortcut icon" href="img/kaffe.png" />
 
     <title><?=PAGE_TITLE?></title>
 
