@@ -44,7 +44,11 @@
 
               // Hämta data (JSON) via en webshopens endpoint
               $data = file_get_contents(
+
+    
+
               "http://localhost/backend-assignments/retrobutiken/products/api/index.php"
+
 );
 
 // Kontrollera data
@@ -72,8 +76,9 @@ foreach ($array as $key => $value) {
   echo "<td>" . $value['namn'] . "</td>";
   echo "<td>" . $value['beskrivning'] . "</td>";
   echo "<td>" . $value['pris'] . "</td>";
-  echo "<td><img src='../retrobutiken/Bilder/" . $value['bild'] . "' alt='' class='img-thumbnail' width='80px' height='80px'></td>";
+  echo "<td><img src='../../retrobutiken/Bilder/" . $value['bild'] . "' alt='' class='img-thumbnail' width='80px' height='80px'></td>";
   echo "</tr>";
+  
 }
 echo "</table>";
 echo "</div>";
