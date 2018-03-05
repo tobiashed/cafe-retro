@@ -25,8 +25,9 @@
   <body>
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
-      <span class="site-heading-upper text-primary mb-3">
-      Återförsäljare till Retrobutiken
-      </span>
+      
       <span class="site-heading-lower">Café Retro</span>
+      <span class="site-heading-upper text-primary mb-3">
+      <br>Återförsäljare till Retrobutiken
+      </span>
     </h1>
