@@ -31,68 +31,62 @@
       </div>
     </nav>
 
-    <section class="page-section">
+    <section class="page-section cta">
       <div class="container">
-        <div class="product-item">
-          <div class="product-item-title d-flex">
-            <div class="bg-faded p-5 d-flex ml-auto rounded">
-              <h2 class="section-heading mb-0">
-                <span class="section-heading-upper">Blended to Perfection</span>
-                <span class="section-heading-lower">Coffees &amp; Teas</span>
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta-inner text-center rounded">
+              <h2 class="section-heading mb-5">
+                <span class="section-heading-upper">Vi är återförsäljare till Retrobutiken</span>
+                <span class="section-heading-lower">Produkter</span>
               </h2>
-            </div>
-          </div>
-          <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-01.jpg" alt="">
-          <div class="product-item-description d-flex mr-auto">
-            <div class="bg-faded p-5 rounded">
-              <p class="mb-0">We take pride in our work, and it shows. Every time you order a beverage from us, we guarantee that it will be an experience worth having. Whether it's our world famous Venezuelan Cappuccino, a refreshing iced herbal tea, or something as simple as a cup of speciality sourced black coffee, you will be coming back for more.</p>
+              <?php
+
+              // Hämta data (JSON) via en webshopens endpoint
+              $data = file_get_contents(
+              "http://localhost/retrobutiken/products/api/index.php"
+);
+
+// Kontrollera data
+if(empty($data)){
+  echo "<h2>Problem med att hämta data!</h2>";
+  exit;
+}
+
+// Konvertera JSON-data till en PHP-array
+$array = json_decode($data, true);
+
+// Testa arrayen.
+if(!is_array($array)){
+echo "<h2>Problem med att skapa en array!</h2>";
+exit;
+}
+
+// Välj data att presentera/skriva ut (som en tabell)
+echo "<div class='table-responsive-sm'>";
+echo "<table class='table table-bordered table-striped'>";
+echo "<tr><th>Artikelnr</th><th>Namn</th><th>Beskrivning</th><th>Pris</th><th>Bild</th></tr>";
+foreach ($array as $key => $value) {
+  echo "<tr>";
+  echo "<td>" . $value['artikelnr'] . "</td>";
+  echo "<td>" . $value['namn'] . "</td>";
+  echo "<td>" . $value['beskrivning'] . "</td>";
+  echo "<td>" . $value['pris'] . "</td>";
+  echo "<td><img src='../retrobutiken/Bilder/" . $value['bild'] . "' alt='' class='img-thumbnail' width='80px' height='80px'></td>";
+  echo "</tr>";
+}
+echo "</table>";
+echo "</div>";
+
+?>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="page-section">
-      <div class="container">
-        <div class="product-item">
-          <div class="product-item-title d-flex">
-            <div class="bg-faded p-5 d-flex mr-auto rounded">
-              <h2 class="section-heading mb-0">
-                <span class="section-heading-upper">Delicious Treats, Good Eats</span>
-                <span class="section-heading-lower">Bakery &amp; Kitchen</span>
-              </h2>
-            </div>
-          </div>
-          <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-02.jpg" alt="">
-          <div class="product-item-description d-flex ml-auto">
-            <div class="bg-faded p-5 rounded">
-              <p class="mb-0">Our seasonal menu features delicious snacks, baked goods, and even full meals perfect for breakfast or lunchtime. We source our ingredients from local, oragnic farms whenever possible, alongside premium vendors for specialty goods.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="page-section">
-      <div class="container">
-        <div class="product-item">
-          <div class="product-item-title d-flex">
-            <div class="bg-faded p-5 d-flex ml-auto rounded">
-              <h2 class="section-heading mb-0">
-                <span class="section-heading-upper">From Around the World</span>
-                <span class="section-heading-lower">Bulk Speciality Blends</span>
-              </h2>
-            </div>
-          </div>
-          <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-03.jpg" alt="">
-          <div class="product-item-description d-flex mr-auto">
-            <div class="bg-faded p-5 rounded">
-              <p class="mb-0">Travelling the world for the very best quality coffee is something take pride in. When you visit us, you'll always find new blends from around the world, mainly from regions in Central and South America. We sell our blends in smaller to large bulk quantities. Please visit us in person for more details.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
 <?php include "footer.php" ?>
 </html>
+
