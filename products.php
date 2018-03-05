@@ -44,7 +44,7 @@
 
               // Hämta data (JSON) via en webshopens endpoint
               $data = file_get_contents(
-              "http://localhost/retrobutiken/products/api/index.php"
+              "http://localhost/backend-assignments/retrobutiken/products/api/index.php"
 );
 
 // Kontrollera data
