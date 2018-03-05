@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
   <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+    <meta name="description" content="Café Retro ägs av Kim, Senna och Edit. Återförsäljare till Retrobutiken.">
     <meta name="author" content="">
 
     <title><?=PAGE_TITLE?></title>
@@ -18,13 +18,15 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/business-casual.min.css" rel="stylesheet">
+    <link href="css/business-casual.css" rel="stylesheet">
 
   </head>
 
   <body>
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
-      <span class="site-heading-upper text-primary mb-3">A Free Bootstrap 4 Business Theme</span>
-      <span class="site-heading-lower">Business Casual</span>
+      <span class="site-heading-upper text-primary mb-3">
+      Återförsäljare till Retrobutiken
+      </span>
+      <span class="site-heading-lower">Café Retro</span>
     </h1>
